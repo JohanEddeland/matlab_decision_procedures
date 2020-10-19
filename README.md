@@ -9,8 +9,8 @@ A set of examples are created in the `loadExamples()` function. For each example
 ```
 corresponds to the formula 
 ```
-(x1 and not(x3)) or
-(x2 and x3) 
+(x1 or not(x3)) and
+(x2 or x3) 
 ```
 
 To run these examples for **Lazy-Basic** (Algorithm 3.3.1), run `example_lazy_basic`. 
