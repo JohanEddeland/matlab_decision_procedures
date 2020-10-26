@@ -15,6 +15,11 @@ for expressionCounter = 1:numel(allExpressions)
     % First, print the formula
     print_formula(expression, atomList);
     
+    for atomCounter = 1:numel(atomList)
+        disp(['atom ' num2str(atomCounter) ': ' ...
+            atomList{atomCounter} ' - shorthand x' num2str(atomCounter)]);
+    end
+    
     % Solve satisfiability problem using lazy_basic (which uses the CDCL class)
     [sat, sol] = lazy_basic(expression, atomList);
     

@@ -13,6 +13,11 @@ for expressionCounter = 1:numel(allExpressions)
     % First, print the formula
     print_formula(expression, atomList);
     
+    for atomCounter = 1:numel(atomList)
+        disp(['atom ' num2str(atomCounter) ': ' ...
+            atomList{atomCounter} ' - shorthand x' num2str(atomCounter)]);
+    end
+    
     obj = DPLL(expression, atomList);
     
     % For expressive output, set obj.verbose = 1
